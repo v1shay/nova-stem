@@ -1,1 +1,173 @@
+:root {
+  --blue: #2563eb;
+  --green: #059669;
+  --light-bg: #f9fafb;
+  --dark: #111;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: var(--light-bg);
+  color: #111;
+  line-height: 1.8;
+}
+
+/* NAV */
+.nav {
+  position: sticky;
+  top: 0;
+  background: white;
+  padding: 20px 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+  z-index: 100;
+}
+
+.nav-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.nav-links a {
+  margin-left: 28px;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+}
+
+.nav-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: var(--blue);
+  color: white !important;
+}
+
+/* SECTIONS */
+.section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 140px 32px;
+}
+
+.hero {
+  text-align: center;
+}
+
+h1 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 3.8rem;
+  letter-spacing: -0.04em;
+}
+
+.tagline {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--green);
+  margin-top: 12px;
+}
+
+.hero-text {
+  max-width: 720px;
+  margin: 48px auto;
+  font-size: 1.25rem;
+}
+
+h2 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 2.8rem;
+  margin-bottom: 36px;
+}
+
+.section-text {
+  max-width: 760px;
+  font-size: 1.2rem;
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  padding: 16px 30px;
+  margin: 10px;
+  font-weight: 600;
+  border-radius: 14px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--blue);
+  color: white;
+}
+
+.btn-secondary {
+  border: 2px solid var(--blue);
+  color: var(--blue);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+}
+
+/* HOW IT WORKS */
+.how-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  margin-top: 64px;
+}
+
+.how-card {
+  background: white;
+  padding: 32px;
+  border-radius: 22px;
+  border: 1px solid #e5e7eb;
+}
+
+.how-card h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.6rem;
+}
+
+/* PLACEHOLDERS */
+.placeholder {
+  margin: 60px 0;
+  padding: 80px;
+  border-radius: 20px;
+  background: #e5e7eb;
+  color: #555;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* CONTACT */
+.contact-buttons {
+  margin-top: 40px;
+}
+
+.contact-btn {
+  padding: 16px 28px;
+  margin-right: 18px;
+  border-radius: 12px;
+  border: none;
+  background: var(--dark);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+}
 
