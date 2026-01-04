@@ -6,8 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
@@ -15,100 +13,107 @@
 
 <body>
 
-  <!-- NAV -->
-  <nav class="nav">
-    <div class="nav-title">NovaSTEM</div>
-    <div class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#how">How It Works</a>
-      <a href="#founder">Founder</a>
-      <a href="#contact" class="nav-btn">Contact</a>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-brand">
+      <img
+        src="images/logo/novastem-logo.png"
+        alt="NovaSTEM Logo"
+        class="hero-logo"
+      />
+      <h1>NovaSTEM</h1>
     </div>
-  </nav>
 
-  <!-- HOME -->
-  <section id="home" class="section hero">
-    <h1>NovaSTEM</h1>
-    <p class="tagline">Hands-On Science. Real Curiosity. Early Impact.</p>
-
-    <p class="hero-text">
-      NovaSTEM is a student-led nonprofit dedicated to making science tangible,
-      exciting, and accessible for younger students.
-      Through hands-on experiments and interactive demonstrations,
-      NovaSTEM brings physics, chemistry, and biology out of textbooks and into the classroom.
+    <p class="hero-tagline">
+      Hands-on STEM education that sparks curiosity, confidence, and real-world understanding.
     </p>
 
     <div class="hero-buttons">
       <a href="#how" class="btn btn-primary">How It Works</a>
-      <a href="#founder" class="btn btn-secondary">About the Founder</a>
-      <a href="#contact" class="btn btn-secondary">Get Involved</a>
+      <a href="#impact" class="btn btn-primary">Our Impact</a>
+      <a href="#contact" class="btn btn-primary">Contact</a>
+    </div>
+
+    <!-- HOME IMAGES -->
+    <div class="hero-images">
+      <img src="images/home/hero-1.jpg" alt="NovaSTEM classroom session">
+      <img src="images/home/hero-2.jpg" alt="Students engaged in hands-on learning">
     </div>
   </section>
 
   <!-- HOW IT WORKS -->
-  <section id="how" class="section how">
+  <section id="how">
     <h2>How It Works</h2>
 
-    <p class="section-text">
-      NovaSTEM sessions are built around interactive, hands-on experiments
-      that allow students to explore core STEM concepts through direct participation.
+    <p class="section-intro">
+      NovaSTEM delivers interactive, age-appropriate experiments across physics,
+      chemistry, and biology—designed to make abstract concepts tangible through
+      hands-on exploration.
     </p>
 
-    <!-- IMAGE GRID COMES HERE LATER -->
-    <div class="placeholder">
-      (Images of experiments will go here)
-    </div>
+    <div class="how-images">
+      <img src="how/process-1.jpg" alt="NovaSTEM experiment setup">
 
-    <div class="how-cards">
-      <div class="how-card">
-        <h3>Physics</h3>
-        <p>Motion, forces, energy, and real-world physical systems.</p>
-      </div>
+      <video
+        src="how/demo-1.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+      ></video>
 
-      <div class="how-card">
-        <h3>Chemistry</h3>
-        <p>Reactions, states of matter, and safe hands-on demonstrations.</p>
-      </div>
+      <img
+        src="how/physics-1.jpg"
+        alt="Physics balloon propulsion demo shown on NovaSTEM website"
+      >
 
-      <div class="how-card">
-        <h3>Biology</h3>
-        <p>Living systems, structure, and how science explains life.</p>
-      </div>
+      <img
+        src="how/chemistry-1.jpg"
+        alt="Chemistry reaction-based experiment"
+      >
+
+      <img
+        src="how/biology-1.jpg"
+        alt="Biology structure and systems activity"
+      >
+
+      <img
+        src="how/students-1.jpg"
+        alt="Students participating in NovaSTEM activities"
+      >
     </div>
   </section>
 
-  <!-- FOUNDER -->
-  <section id="founder" class="section founder">
-    <h2>About the Founder</h2>
+  <!-- IMPACT -->
+  <section id="impact">
+    <h2>Our Impact</h2>
 
-    <!-- IMAGE GOES HERE LATER -->
-    <div class="placeholder">
-      (Founder photo will go here)
+    <div class="impact-grid">
+      <img
+        src="images/home/impact-1.jpg"
+        alt="Students collaborating during NovaSTEM session"
+      >
+      <img
+        src="images/home/impact-2.jpg"
+        alt="Instructor guiding students through experiment"
+      >
     </div>
-
-    <p class="section-text">
-      NovaSTEM was founded with the belief that early exposure to hands-on science
-      can shape how students see learning, problem-solving, and their own potential.
-      The goal is to make STEM feel approachable, engaging, and exciting from a young age.
-    </p>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="section contact">
+  <section id="contact">
     <h2>Let’s Connect</h2>
 
-    <p class="section-text">
-      Interested in collaborating, bringing NovaSTEM to your school,
-      or learning more about the program?
-    </p>
-
     <div class="contact-buttons">
-      <button class="contact-btn">Email</button>
-      <button class="contact-btn">Personal Website</button>
-      <button class="contact-btn">Resume</button>
+      <a href="mailto:your@email.com" class="btn btn-dark">Email</a>
+      <a href="https://yourwebsite.com" target="_blank" class="btn btn-dark">
+        Founder Website
+      </a>
+      <a href="resume.pdf" target="_blank" class="btn btn-dark">
+        Resume
+      </a>
     </div>
   </section>
 
 </body>
 </html>
-
