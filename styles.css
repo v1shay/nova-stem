@@ -123,33 +123,34 @@ body {
   object-fit: cover;
   border-radius: 20px;
 }
+/* ---------- IMPACT (ACTUALLY FIXED) ---------- */
 
-/* ---------- IMPACT (FIXED) ---------- */
-
-.impact-simple {
+.section .impact-simple {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 36px;
-  max-width: 900px;     /* widened */
-  margin: 0 auto;       /* centered */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+  max-width: 1000px;   /* THIS is what makes it feel big */
+  margin: 48px auto 0;
 }
 
-.impact-card {
+.section .impact-card {
   background: white;
-  padding: 40px 36px;
-  border-radius: 24px;
+  padding: 48px 40px;  /* visibly larger cards */
+  border-radius: 28px;
   text-align: center;
 }
 
-.impact-card h3 {
+.section .impact-card h3 {
   font-family: "Space Grotesk", sans-serif;
-  font-size: 2.1rem;
-  margin-bottom: 10px;
+  font-size: 2.2rem;   /* clearly bigger */
+  margin-bottom: 14px;
 }
 
-.impact-card p {
-  font-size: 1.1rem;
+.section .impact-card p {
+  font-size: 1.15rem;
   color: var(--muted);
+  max-width: 420px;
+  margin: 0 auto;
 }
 
 /* ---------- HOW IT WORKS ---------- */
