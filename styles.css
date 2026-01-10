@@ -256,7 +256,7 @@ p { color: var(--muted); }
 }
 
 .founder img {
-  max-width: 100px;
+  max-width: 0px;
   border-radius: 20px;
 }
 
@@ -296,7 +296,7 @@ p { color: var(--muted); }
     grid-template-columns: 1fr;
   }
 
-  .teach-card img { height: 500px; }
+  .teach-card img { height: 1000px; }
 
   .founder img {
     max-width: 100px;
