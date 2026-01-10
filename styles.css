@@ -335,4 +335,21 @@ p { color: var(--muted); }
     width: 100%;
     max-width: 300px;
   }
+   @media (max-width: 768px) {
+  .founder img {
+    display: block;
+  }
+
+  .founder-content > * {
+    clear: both;
+  }
+      @media (max-width: 768px) {
+  .founder img {
+    max-width: 140px;
+    margin: 0 auto 16px;
+  }
+}
+
+}
+
 }
