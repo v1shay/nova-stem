@@ -92,10 +92,9 @@ p { color: var(--muted); }
 .hero {
   background: var(--white);
   overflow: hidden;
-  position: relative; /* REQUIRED for leaf positioning */
+  position: relative;
 }
 
-/* BIG decorative leaves */
 .hero::before,
 .hero::after {
   content: "";
@@ -106,7 +105,7 @@ p { color: var(--muted); }
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0.95;
-  z-index: 0; /* stay behind text */
+  z-index: 0;
   pointer-events: none;
 }
 
@@ -123,7 +122,7 @@ p { color: var(--muted); }
 .hero-inner {
   text-align: center;
   position: relative;
-  z-index: 1; /* text above leaves */
+  z-index: 1;
 }
 
 .hero-brand {
@@ -194,7 +193,7 @@ p { color: var(--muted); }
 }
 
 /* ===============================
-   HOW IT WORKS (BOXES)
+   HOW IT WORKS
 ================================ */
 .steps {
   display: grid;
@@ -252,22 +251,29 @@ p { color: var(--muted); }
 }
 
 /* ===============================
-   FOUNDER (FINAL FIX)
+   FOUNDER (HARD FIX — DO NOT REMOVE)
 ================================ */
+
+/* 🔴 FORCE NORMAL DOCUMENT FLOW */
+.founder-content,
+.founder-content * {
+  position: static !important;
+  transform: none !important;
+}
+
 .founder-content {
   display: grid;
-  grid-template-columns: 180px 1fr;
+  grid-template-columns: 220px 1fr;
   gap: 32px;
-  align-items: center;
-
-  /* 🔑 THIS FIXES TEXT-ON-IMAGE */
+  align-items: flex-start;
   background: white;
   padding: 48px;
   border-radius: 24px;
 }
 
 .founder img {
-  width: 180px;
+  width: 100%;
+  max-width: 220px;
   height: auto;
   border-radius: 20px;
   object-fit: cover;
@@ -312,8 +318,8 @@ p { color: var(--muted); }
   .teach-card img { height: 700px; }
 
   .founder img {
-    width: 120px;
-    margin: 0 auto;
+    max-width: 140px;
+    margin: 0 auto 20px;
   }
 
   .founder-content {
