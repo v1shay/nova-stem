@@ -348,6 +348,30 @@ p { color: var(--muted); }
     max-width: 140px;
     margin: 0 auto 16px;
   }
+         @media (max-width: 768px) {
+
+  /* FORCE STACKING — NO OVERLAP POSSIBLE */
+  .founder-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .founder img {
+    width: 140px !important;
+    max-width: 140px !important;
+    height: auto !important;
+    margin-bottom: 20px !important;
+  }
+
+  .founder-content h2,
+  .founder-content p {
+    position: relative !important;
+    z-index: 2 !important;
+    text-align: center !important;
+  }
+}
+
 }
 
 }
