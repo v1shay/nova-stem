@@ -38,9 +38,17 @@
       position: relative;
       width: 420px;
       height: 420px;
-      border-radius: 50%;
-      background: radial-gradient(circle at 30% 30%, #22c55e, #15803d);
-      box-shadow: 0 20px 60px rgba(21, 128, 61, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .brain-image {
+      width: 100%;
+      height: auto;
+      pointer-events: none;
+      user-select: none;
+      filter: drop-shadow(0 20px 60px rgba(21, 128, 61, 0.35));
     }
 
     .pillar-node {
@@ -72,6 +80,8 @@
       font-size: 0.9rem;
       font-weight: 600;
       color: #0f172a;
+      text-align: center;
+      pointer-events: none;
     }
   </style>
 </head>
@@ -85,7 +95,13 @@
     to full end-to-end AI development.
   </p>
 
-  <div class="brain-wrapper" id="brain"></div>
+  <div class="brain-wrapper" id="brain">
+    <img
+      src="coding-brain.png"
+      alt="Coding Brain Roadmap"
+      class="brain-image"
+    />
+  </div>
 </div>
 
 <script src="data/course-map.js"></script>
@@ -123,4 +139,3 @@
 
 </body>
 </html>
-v
