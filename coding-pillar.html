@@ -132,6 +132,9 @@
 
 <script src="data/course-map.js"></script>
 <script>
+  /* ===============================
+     READ URL PARAMS
+  ================================ */
   const params = new URLSearchParams(window.location.search);
   const pillarId = params.get("pillar");
 
@@ -139,22 +142,33 @@
   const descEl = document.getElementById("pillar-description");
   const lessonGrid = document.getElementById("lesson-grid");
 
+  /* ===============================
+     LOOK UP PILLAR (FIXED ORDER)
+  ================================ */
+  const pillar = COURSE_MAP.coding.pillars.find(
+    p => p.id === pillarId
+  );
+
   if (!pillar) {
     titleEl.textContent = "Invalid Pillar";
     descEl.textContent = "This pillar does not exist.";
     throw new Error("Invalid pillar ID");
   }
 
-
-  const pillar = COURSE_MAP.coding.pillars.find(p => p.id === pillarId);
-
+  /* ===============================
+     RENDER PILLAR META
+  ================================ */
   titleEl.textContent = pillar.title;
   descEl.textContent = pillar.description;
 
+  /* ===============================
+     RENDER LESSONS (FIXED ROUTING)
+  ================================ */
   const lessons = pillar.lessons || [];
 
   if (lessons.length === 0) {
-    lessonGrid.innerHTML = `<p class="coming-soon">Lessons coming soon.</p>`;
+    lessonGrid.innerHTML =
+      `<p class="coming-soon">Lessons coming soon.</p>`;
   } else {
     lessons.forEach(lesson => {
       const card = document.createElement("div");
@@ -167,7 +181,7 @@
 
       card.onclick = () => {
         window.location.href =
-          `lesson.html?pillar=${pillarId}&lesson=${lesson.id}`;
+          `lesson.html?subject=computer-science&pillar=${pillarId}&lesson=${lesson.id}`;
       };
 
       lessonGrid.appendChild(card);
@@ -177,4 +191,3 @@
 
 </body>
 </html>
-
