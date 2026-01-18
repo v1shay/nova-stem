@@ -9,9 +9,48 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- ADDITION: SNAP + GALLERY INERTIA (ONLY ADDITIONS) -->
+  <style>
+    body {
+      overflow: hidden;
+    }
+
+    /* ===== VERTICAL SNAP ===== */
+    .snap-container {
+      height: 100vh;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .hero.section,
+    .section {
+      scroll-snap-align: start;
+      min-height: 100svh;
+    }
+
+    /* ===== HORIZONTAL SNAP (CLASSROOM GALLERY) ===== */
+    .classroom-grid {
+      display: flex;
+      gap: 24px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 12px;
+    }
+
+    .classroom-grid > div {
+      flex: 0 0 auto;
+      width: 340px;
+      scroll-snap-align: center;
+    }
+  </style>
 </head>
 
 <body>
+
+<div class="snap-container">
 
 <!-- HERO -->
 <section class="hero section">
@@ -168,7 +207,7 @@
   </div>
 </section>
 
-<!-- CLASSROOM -->
+<!-- CLASSROOM (HORIZONTAL SNAP + INERTIA) -->
 <section class="section">
   <div class="container">
     <h2>In the Classroom</h2>
@@ -176,14 +215,7 @@
     <div class="classroom-grid">
 
       <div>
-        <video
-          muted
-          autoplay
-          loop
-          playsinline
-          preload="auto"
-          controls
-        >
+        <video muted autoplay loop playsinline preload="auto" controls>
           <source src="IMG_2995 3.mp4" type="video/mp4">
         </video>
         <div class="caption">
@@ -201,14 +233,7 @@
       </div>
 
       <div>
-        <video
-          muted
-          autoplay
-          loop
-          playsinline
-          preload="auto"
-          controls
-        >
+        <video muted autoplay loop playsinline preload="auto" controls>
           <source src="how/demo-1.mp4" type="video/mp4">
         </video>
         <div class="caption">
@@ -252,11 +277,31 @@
   </div>
 </section>
 
-<div class="snap-container">
-  <section class="snap-section">Section 1</section>
-  <section class="snap-section">Section 2</section>
-  <section class="snap-section">Section 3</section>
 </div>
+
+<!-- ADDITION: DRAG / FLICK INERTIA FOR CLASSROOM -->
+<script>
+  const gallery = document.querySelector('.classroom-grid');
+
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  gallery.addEventListener('mousedown', e => {
+    isDown = true;
+    startX = e.pageX - gallery.offsetLeft;
+    scrollLeft = gallery.scrollLeft;
+  });
+
+  gallery.addEventListener('mouseleave', () => isDown = false);
+  gallery.addEventListener('mouseup', () => isDown = false);
+
+  gallery.addEventListener('mousemove', e => {
+    if (!isDown) return;
+    e.preventDefault();
+    gallery.scrollLeft = scrollLeft - (e.pageX - gallery.offsetLeft - startX) * 1.4;
+  });
+</script>
 
 </body>
 </html>
