@@ -1,4 +1,4 @@
-# 🌱 NovaSTEM & NovaSTEM EDU
+# 🌱 NovaSTEM
 
 **Hands-on STEM education and AI-powered learning platforms designed to teach students how to think.**
 
