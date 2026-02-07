@@ -1,36 +1,51 @@
-# 🌱 NovaSTEM
-
-**Hands-on STEM education and AI-powered learning platforms designed to teach students how to think.**
-
----
-
-## Overview
-
-**NovaSTEM** is a student-founded STEM education initiative that delivers free, hands-on science and engineering workshops directly to elementary classrooms.
-
-**NovaSTEM EDU** extends this mission through a scalable, AI-powered learning platform focused on **algorithmic thinking** and **scientific reasoning**, using mastery-based progression inspired by platforms like Duolingo.
-
-Together, they form a unified ecosystem combining **in-person impact** with **technology-driven learning at scale**.
+# STEM Outreach Platform
+> A lightweight web platform for running, organizing, and scaling hands-on STEM education programs.
 
 ---
 
-## NovaSTEM (Nonprofit Program)
-
-### Mission
-Make rigorous, inquiry-driven STEM education accessible to all students through hands-on experimentation and problem-solving.
-
-### Program Highlights
-- Hands-on biology, chemistry, physics, and engineering workshops
-- Designed and taught by student educators
-- All materials provided
-- Free for partner schools
-- Community-based partnerships
-
-### Pedagogical Focus
-- Inquiry-based learning  
-- Student-led experimentation  
-- Real-world scientific reasoning  
-- Curiosity and confidence building  
+## Features
+- Static, fast-loading site built with plain HTML, CSS, and JavaScript  
+- Program pages for workshops, curricula, and events  
+- Clear separation between content, layout, and behavior  
+- Easy to update without a backend or build tooling  
+- Designed to be understandable and maintainable by students  
 
 ---
 
+## Why This Exists
+A lot of STEM outreach efforts fail not because the ideas are bad, but because the infrastructure is fragile. Sites are overengineered, hard to update, or dependent on tools that volunteers don’t know how to use.
+
+This platform keeps things simple. It prioritizes clarity, accessibility, and ease of maintenance so the focus stays on teaching, not tooling.
+
+---
+
+## How It Works
+The platform is intentionally minimal and transparent.
+
+1. Content is written directly in HTML for clarity and control  
+2. CSS handles layout and responsiveness without heavy frameworks  
+3. JavaScript adds small interactive behaviors where needed  
+4. The site can be deployed anywhere that supports static hosting  
+
+There is no backend dependency, which makes the system easy to host, clone, and extend.
+
+---
+
+## Tech Stack
+- **Frontend:** HTML, CSS, JavaScript  
+- **Hosting:** Static hosting (GitHub Pages, Vercel, Netlify, etc.)  
+- **Architecture:** Static site with modular assets  
+
+---
+
+## Project Structure
+```text
+stem-platform/
+├── index.html
+├── programs/
+│   └── workshops.html
+├── css/
+│   └── styles.css
+├── js/
+│   └── main.js
+└── README.md
